@@ -7,6 +7,16 @@
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
+body.dark
+{
+    
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+    
+}
 body
 {
     margin: 0;
@@ -87,6 +97,10 @@ ul
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
+    
+}
+.section-title h2 {
+    font-size: clamp(24px, 5vw, 40px);
 }
 
 .section-title h2::before
@@ -130,6 +144,8 @@ ul
     color: white;
     border-radius: 40px;
     display: inline-block;
+    
+    align-items: center;
     white-space: nowrap;
     background-color: var(--skin-color);
     transition: all 0.3s ease;
@@ -575,67 +591,7 @@ h3.title{
     text-align: justify;
     color: var(--text-black-700);
 }
-/* .service .service-item
-{
-    margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    min-width: 33.33%;
-}
-.service-item-inner
-{
-    background-color: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
-    border-radius: 10px;
-    padding: 30px 15px;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-.service-item-inner:hover
-{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
-.service-item-inner .icon{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 30px;
-    text-align: center;
-    transition: all 0.3s ease;
 
-}
-.service-item-inner .icon .fa{
-    font-size: 40px;
-    line-height: 60px;
-    color: var(--skin-color);
-}
-
-.service-item-inner:hover .icon {
-    background: var(--skin-color);
-}
-.service-item-inner:hover .icon .fa{
-    font-size: 25px;
-    color: #ffffff;
-}
-.service-item-inner h4{
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-black-900);
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-.service-item-inner p
-{
-    font-size: 16px;
-    color: var(--text-black-700);
-    line-height: 25px;
-}
-.service ,.container
-{
-    padding-bottom: 40px;
-
-} */
  .service .row {
     display: flex;
     flex-wrap: wrap;
@@ -766,5 +722,258 @@ h3.title{
     color: var(--text-black-900);
     text-align: center;
     font-size: 15px;
+    margin-bottom: 60px;
+}
+.contact-info-item
+{
+    flex: 0 0 25%;
+    min-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.contact-info-item .icon{
+    display: block;
+}
+.contact-info-item .icon .fa
+{
+    font-size: 25px;
+    color: var(--skin-color);
+}
+.contact-info-item h4
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+.contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 100;
+}
+.contact .contact-form
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.form-item
+{
+    margin-bottom: 30px;
+}
+.form-control
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+.form-control:focus
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+textarea.form-control
+{
+    height: 140px;
+}
+.btn{
+    height: 50px;
+}
+/* ========== Responsive Fixes ========== */
+
+@media (max-width: 1500px) {
+     .aside {
+        left: -270px;
+        transition: all 0.3s ease;
+    }
+    .main-content {
+        padding-left: 0;
+    }
+    .aside.open {
+        left: 0;
+    }
+    .aside .nav-toggler {
+        display: flex;
+    }
+.aside .nav-toggler{
+    left: 50px;
+    top: 50px;
+}
+    .home .home-info {
+    flex: 0 0 50%;
+    max-width: 45%;
+    margin-left: 157px;
+}
 }
 
+@media (max-width:1199px){
+    .aside
+    {
+        left: -270px;
+    }
+    .main-content
+    {
+        padding-left: 0;
+
+    }
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:991px)
+{
+    .contact .contact-info-item, .portfolio .portfolio-item,
+    .service.service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .about .about-content .education,
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+
+
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about
+    .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+    .aside {
+        left: -270px;
+        transition: all 0.3s ease;
+    }
+    .main-content {
+        padding-left: 0;
+    }
+    .aside.open {
+        left: 0;
+    }
+    .aside .nav-toggler {
+        display: flex;
+    }
+    .home .row{
+        margin-right: 270px;
+    }
+    .row{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .name{
+        display: block;
+    }
+.aside .nav-toggler{
+    left: 50px;
+    top: 50px;
+}
+    .home .home-info,
+    .home .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about .personal-info,
+    .about .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .education,
+    .experience {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .contact-info-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile Devices (<= 576px) */
+@media (max-width: 576px) {
+    h3.hello,
+    h3.my-profession {
+        font-size: 22px;
+    }
+
+    .home-info p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .portfolio .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
