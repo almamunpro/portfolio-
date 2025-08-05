@@ -705,6 +705,7 @@ h3.title{
 {
     width: 100%;
     display: block;
+    height: 500px;
 
 }
 
@@ -929,6 +930,7 @@ textarea.form-control
     .portfolio .portfolio-item {
         flex: 0 0 50%;
         max-width: 50%;
+        
     }
 
     .contact-info-item {
