@@ -979,3 +979,6 @@ textarea.form-control
         padding: 8px 20px;
     }
 }
+html {
+  scroll-behavior: smooth;
+}
